@@ -1,0 +1,136 @@
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto;
+  gap: 18px 48px;
+  padding: 24px clamp(18px, 3vw, 48px) 18px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.site-wordmark {
+  display: inline-grid;
+  justify-self: start;
+  gap: 1px;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+}
+
+.site-wordmark span,
+.primary-nav span {
+  font-weight: 500;
+}
+
+.site-wordmark small,
+.primary-nav small,
+.category-nav small,
+.en-note {
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.primary-nav,
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+.primary-nav a,
+.category-nav a {
+  display: inline-grid;
+  gap: 1px;
+  color: var(--muted);
+}
+
+.primary-nav a.is-active,
+.primary-nav a:hover,
+.category-nav a.is-active,
+.category-nav a:hover {
+  color: var(--ink);
+}
+
+.category-nav {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  gap: 12px 28px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+}
+
+.page {
+  flex: 1;
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  padding: clamp(72px, 10vw, 144px) clamp(18px, 4vw, 56px);
+}
+
+.page-narrow {
+  max-width: 920px;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding: 22px clamp(18px, 3vw, 48px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 920px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .primary-nav {
+    justify-content: flex-start;
+  }
+
+  .site-footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    position: static;
+    padding: 16px 18px;
+  }
+
+  .primary-nav,
+  .category-nav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .primary-nav a,
+  .category-nav a {
+    min-width: max-content;
+  }
+
+  .page {
+    padding: 64px 18px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+}

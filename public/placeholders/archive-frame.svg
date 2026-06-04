@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Archive placeholder">
+  <rect width="600" height="420" fill="#f7f7f7"/>
+  <path d="M64 80H536M64 340H536M120 80V340M420 80V340" stroke="#111111" stroke-width="1" opacity=".42"/>
+  <rect x="168" y="122" width="220" height="156" fill="none" stroke="#111111" stroke-width="1" opacity=".42"/>
+  <circle cx="445" cy="134" r="34" fill="none" stroke="#111111" stroke-width="1" opacity=".42"/>
+  <path d="M168 304H388" stroke="#111111" stroke-width="1" opacity=".42"/>
+</svg>
